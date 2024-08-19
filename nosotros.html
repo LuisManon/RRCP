@@ -13,11 +13,11 @@
 <body>
     <!-- Header -->
     <header class="header-top">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center anti-container">
             <div class="contact-info">
                 <i class="fas fa-phone" style="transform: rotate(100deg);"></i> 1-829-467-0777
                 <span class="separator">|</span>
-                <i class="fas fa-map-marker-alt"></i> Calle Wifredo García #5, Santo Domingo 10510
+                <i class="fas fa-map-marker-alt"></i> CECILIP, Calle Wifredo García #5, Santo Domingo 10510
                 <span class="separator">|</span>
                 <i class="fas fa-envelope"></i> info@rafaelrivera.do
             </div>
@@ -40,27 +40,65 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #D4B655;" href="index.html">Nosotros</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html" style="color: #D4B655;">Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="galeria.html">Antes & Después</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Procedimientos</a>
+                        <a class="nav-link" href="procedimientos.html">Procedimientos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html"><img src="img/us.png" alt="Inglés" style="height: 15px;"></a>
+                        <a class="nav-link no-underline" href="about.html"><img src="img/us.png" alt="Inglés" style="height: 15px;"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html"><img src="img/es.png" alt="Español" style="height: 15px;"></a>
+                        <a class="nav-link no-underline" href="index.html"><img src="img/es.png" alt="Español" style="height: 15px;"></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <video autoplay loop muted class="doctor-video">
+                        <source src="multimedia/aboutMe.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>                
+                <div class="col-md-8">
+                    <h1 class="doctor-title">Dr. Rafael Rivera</h1>
+                    <h4 class="doctor-subtitle">Cirujano Plástico en Santo Domingo, República Dominicana</h4>
+                    <div class="conoce-doctor-parrafo">
+                        <p>Dr. Rafael Rivera es un cirujano plástico reconocido por su vasta experiencia y dedicación a sus pacientes. Con años de formación y práctica, se ha convertido en un referente en el campo de la cirugía estética y reconstructiva. Su enfoque personalizado y su compromiso con la excelencia le han ganado la confianza y el respeto de quienes han recurrido a él para mejorar su calidad de vida.</p>
+                        <p>A lo largo de su carrera, el Dr. Rivera ha participado en numerosas conferencias nacionales e internacionales mencionando países como México, Guatemala y Costa Rica, donde ha compartido sus conocimientos y se ha mantenido a la vanguardia de las últimas técnicas en cirugía plástica. Además, ha llevado a cabo extensas preparaciones en el área de cirugía estética, perfeccionando su habilidad para ofrecer resultados naturales y satisfactorios a sus pacientes.</p>                  
+                        <p>El Dr. Rivera ha realizado una amplia variedad de intervenciones exitosas, ayudando a sus pacientes a alcanzar sus objetivos estéticos y mejorando su autoestima. Su pasión por la cirugía plástica es evidente en cada procedimiento que realiza, enfocándose siempre en la seguridad y el bienestar de cada persona.</p>
+                        <p>Actualmente, el Dr. Rivera se desempeña como cirujano plástico, reconstructivo y estético especializado en reconstrucción post-bariátrica en el Centro de Cirugía Plástica y Liposucción (CECILIP), ubicado en la Calle Wifredo García #5, Arroyo Hondo, Santo Domingo 10510. Su compromiso con la excelencia y la atención al detalle lo convierten en una opción confiable para quienes buscan transformar su imagen y mejorar su calidad de vida.</p>
+                    </div>
+                    <div class="instituciones my-3">
+                        <img src="img/instituciones/file.png" alt="Institución 1" class="img-fluid mx-2">
+                        <img src="img/instituciones/cdcp.png" alt="Institución 2" class="img-fluid mx-2">
+                        <img src="img/instituciones/cmd.png" alt="Institución 3" class="img-fluid mx-2">
+                        <img src="img/instituciones/filacp.png" alt="Institución 4" class="img-fluid mx-2">
+                        <img src="img/instituciones/ISAPS.png" alt="Institución 5" class="img-fluid mx-2">
+                    </div>
+                    <div class="procedure-links my-3">
+                        <a href="galeria.html" class="procedure-link-item">Ir a Galería</a>
+                        <a href="contacto.html" class="procedure-link-item">Ir a Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contacto y Footer Unificado -->
     <section id="contacto2-footer" class="py-4">
@@ -88,6 +126,13 @@
             </div>
         </div>
     </section>
+
+        <!-- Botón WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=18294670777&text=Hola%20quiero%20información%20sobre%20los%20procedimientos" 
+        class="whatsapp-button" 
+        target="_blank">
+            <img src="img/icons8-whatsapp.svg" alt="WhatsApp">
+        </a>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

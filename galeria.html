@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="lightbox.css"> <!-- Estilos para lightbox -->
 </head>
 <body>
     <!-- Header -->
     <header class="header-top">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center anti-container">
             <div class="contact-info">
                 <i class="fas fa-phone" style="transform: rotate(100deg);"></i> 1-829-467-0777
                 <span class="separator">|</span>
-                <i class="fas fa-map-marker-alt"></i> Calle Wifredo García #5, Santo Domingo 10510
+                <i class="fas fa-map-marker-alt"></i> CECILIP, Calle Wifredo García #5, Santo Domingo 10510
                 <span class="separator">|</span>
                 <i class="fas fa-envelope"></i> info@rafaelrivera.do
             </div>
@@ -41,22 +40,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Nosotros</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #D4B655;" href="index.html">Antes & Después</a>
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Procedimientos</a>
+                        <a class="nav-link" href="galeria.html" style="color: #D4B655;">Antes & Después</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="procedimientos.html">Procedimientos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><img src="img/us.png" alt="Inglés" style="height: 15px;"></a>
+                        <a class="nav-link no-underline" href="about.html"><img src="img/us.png" alt="Inglés" style="height: 15px;"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="img/es.png" alt="Español" style="height: 15px;"></a>
+                        <a class="nav-link no-underline" href="index.html"><img src="img/es.png" alt="Español" style="height: 15px;"></a>
                     </li>
                 </ul>
             </div>
@@ -71,72 +73,60 @@
                     <h2>Galería de Antes y Después</h2>
                     <p class="poppins-regular">Explora nuestra galería para ver los resultados transformadores de nuestros procedimientos de cirugía plástica. Cada imagen muestra cambios sorprendentes y personalizados que reflejan nuestro compromiso con la belleza natural.</p>
                 </div>
-                <!-- Botones de filtro -->   
-                <div id="gallery-filters col-md-12">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <button class="filter-btn active" data-filter="all">Todos</button>
-                            </div>
-                            <div class="col-md-4">
-                                <button class="filter-btn" data-filter="aumento">Aumento</button>
-                            </div>
-                            <div class="col-md-4">
-                                <button class="filter-btn" data-filter="disminucion">Disminución</button>
-                            </div>
-                            <!-- Agregar más botones según sea necesario -->
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Galería -->   
-    <section id="galeria">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4 gallery-item" data-categories="aumento">
-                    <a href="img/galeria/IMG_5693.jpg" data-lightbox="gallery" data-title="Aumento 1">
-                        <img src="img/galeria/IMG_5693.jpg" class="img-fluid rounded gallery-image" alt="Aumento 1">
-                    </a>
-                </div>
-                <div class="col-md-4 mb-4 gallery-item" data-categories="aumento">
-                    <a href="img/galeria/IMG_5693.jpg" data-lightbox="gallery" data-title="Aumento 2">
-                        <img src="img/galeria/IMG_5693.jpg" class="img-fluid rounded gallery-image" alt="Aumento 2">
-                    </a>
-                </div>
-                <div class="col-md-4 mb-4 gallery-item" data-categories="disminucion">
-                    <a href="img/galeria/IMG_5693.jpg" data-lightbox="gallery" data-title="Aumento 3">
-                        <img src="img/galeria/IMG_5693.jpg" class="img-fluid rounded gallery-image" alt="Aumento 3">
-                    </a>
-                </div>
-                <div class="col-md-4 mb-4 gallery-item" data-categories="disminucion">
-                    <a href="img/galeria/IMG_5693.jpg" data-lightbox="gallery" data-title="Disminución 1">
-                        <img src="img/galeria/IMG_5693.jpg" class="img-fluid rounded gallery-image" alt="Disminución 1">
-                    </a>
-                </div>
-                <div class="col-md-4 mb-4 gallery-item" data-categories="disminucion">
-                    <a href="img/galeria/IMG_5693.jpg" data-lightbox="gallery" data-title="Disminución 2">
-                        <img src="img/galeria/IMG_5693.jpg" class="img-fluid rounded gallery-image" alt="Disminución 2">
-                    </a>
-                </div>
-                <div class="col-md-4 mb-4 gallery-item" data-categories="disminucion">
-                    <a href="img/galeria/IMG_5693.jpg" data-lightbox="gallery" data-title="Disminución 3">
-                        <img src="img/galeria/IMG_5693.jpg" class="img-fluid rounded gallery-image" alt="Disminución 3">
-                    </a>
-                </div>
-                <!-- Agregar más imágenes con categorías correspondientes -->
-            </div>
+<!-- Botones de Filtro -->
+<div id="filter-card" class="d-flex justify-content-center">
+    <div id="gallery-filters" class="d-flex flex-wrap">
+        <button class="filter-btn active" data-filter="*">Todos</button>
+        <button class="filter-btn" data-filter=".senos">Cirugía de Senos</button>
+        <button class="filter-btn" data-filter=".facial">Cirugía Facial</button>
+        <button class="filter-btn" data-filter=".corporal">Contorno Corporal</button>
+    </div>
+</div>
+
+<!-- Galería de Imágenes -->
+<div class="container">
+    <div class="row grid">
+        <!-- Ejemplo de imágenes filtrables -->
+        <div class="col-md-4 grid-item senos">
+            <img src="img/galeria/IMG_5693.jpg" alt="Aumento 1">
         </div>
-    </section>
-    
-    <!-- Lightbox para imágenes ampliadas -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="close">&times;</span>
-            <img src="" alt="" class="lightbox-img">
+        <div class="col-md-4 grid-item facial">
+            <img src="img/galeria/IMG_5693.jpg" alt="Disminución 1">
         </div>
+        <div class="col-md-4 grid-item corporal">
+            <img src="img/galeria/IMG_5693.jpg" alt="Aumento 2">
+        </div>
+        <!-- Continúa con más imágenes... -->
+        <div class="col-md-4 grid-item senos">
+            <img src="img/galeria/IMG_5693.jpg" alt="Aumento 1">
+        </div>
+        <div class="col-md-4 grid-item facial">
+            <img src="img/galeria/IMG_5693.jpg" alt="Disminución 1">
+        </div>
+        <div class="col-md-4 grid-item corporal">
+            <img src="img/galeria/IMG_5693.jpg" alt="Aumento 2">
+        </div>
+                <!-- Continúa con más imágenes... -->
+        <div class="col-md-4 grid-item senos">
+            <img src="img/galeria/IMG_5693.jpg" alt="Aumento 1">
+        </div>
+        <div class="col-md-4 grid-item facial">
+            <img src="img/galeria/IMG_5693.jpg" alt="Disminución 1">
+        </div>
+        <div class="col-md-4 grid-item corporal">
+            <img src="img/galeria/IMG_5693.jpg" alt="Aumento 2">
+        </div>
+    </div>
+</div>
+
+    <!-- Modal de Imagen -->
+    <div class="modal-img-overlay" id="modal-img-overlay">
+        <span class="modal-close" id="modal-close">&times;</span>
+        <img src="" alt="Imagen Agrandada" id="modal-img">
     </div>
 
     <!-- Contacto y Footer Unificado -->
@@ -165,12 +155,21 @@
             </div>
         </div>
     </section>
+
+        <!-- Botón WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=18294670777&text=Hola%20quiero%20información%20sobre%20los%20procedimientos" 
+        class="whatsapp-button" 
+        target="_blank">
+            <img src="img/icons8-whatsapp.svg" alt="WhatsApp">
+        </a>
     
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="lightbox.js"></script> <!-- Script para lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="script.js"></script> <!-- Script para manejar la barra de carga -->
+    <script src="https://cdn.jsdelivr.net/npm/animated.js@1.0.0"></script>
 </body>
 </html>

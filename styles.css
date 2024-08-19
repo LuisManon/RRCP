@@ -1,18 +1,36 @@
 /* Estilos generales */
+
+/* Importar la fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Elizabeth';
+    src: url('fonts/Elizabeth Script.otf') format('opentype'),
+         url('fonts/Elizabeth Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    /* font-family: 'roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 .container {
     margin-top: 20px;
 }
 
+.anti-container {
+    margin-top: 0px;
+}
+
 .header-top {
     background-color: #0F2C54;
     padding: 10px 0;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
@@ -25,13 +43,44 @@ body {
     margin-right: 5px;
 }
 
+/* Estilos para el efecto de hover en el navbar */
 .navbar-light .navbar-nav .nav-link {
+    position: relative;
     color: #0F2C54;
+    overflow: hidden;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Grosor del subrayado */
+    bottom: 0; /* Ajusta esta propiedad para acercar el subrayado */
+    left: -100%;
+    background-color: #D4B655;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before {
+    visibility: visible;
+    left: 0;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: #D4B655;
 }
+
+/* Estilos para los enlaces sin subrayado */
+.navbar-light .navbar-nav .nav-link.no-underline:hover::before {
+    visibility: hidden;
+    left: -100%;
+}
+
+.navbar-light .navbar-nav .nav-link.no-underline:hover {
+    color: inherit;
+}
+
 
 .map-container {
     position: relative;
@@ -121,6 +170,18 @@ body {
         text-align: center;
         max-width: 100%;
     }
+    .header-top {
+        display: none;
+    }
+    #contacto2-footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacto2-footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
 footer.bg-dark {
@@ -130,7 +191,7 @@ footer.bg-dark {
 .footer-top {
     background-color: #0F2C54;
     padding: 10px 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
@@ -153,62 +214,178 @@ footer.bg-dark {
 
 #intro-galeria p {
     color: #0F2C54; /* Color del texto */
-    font-family: 'Poppins', sans-serif; /* Aplicar Poppins Light */
+    font-family: 'Montserrat', sans-serif; /* Aplicar Poppins Light */
     font-weight: 300; /* Estilo Light */
     width: 100%; /* Hacer que el párrafo ocupe todo el ancho disponible */
     max-width: none; /* Deshabilitar el ancho máximo si está presente */
 }
 
-#galeria {
-    padding: 20px 0;
-}
-
-#galeria .col-md-4 {
-    margin-bottom: 20px;
-}
-
-.gallery-image:hover {
-    transform: scale(1.05);
-}
-
 /* Estilos para las imágenes de la galería */
-.gallery-image {
-    transition: transform 0.3s ease-out;
+        /* Botones de Filtro */
+
+/* Estilo general del contenedor tipo "card" */
+/* Estilo general del contenedor tipo "card" */
+#filter-card {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para el efecto de tarjeta */
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
 }
 
-
-/* Estilos para los botones de filtro */
-#gallery-filters {
-    text-align: center; /* Centrar los botones horizontalmente */
-    margin-top: 20px; /* Espacio superior */
-}
-
+/* Estilos generales para los botones */
 .filter-btn {
-    background-color: white; /* Color de fondo del botón */
-    color: #0F2C54; /* Color del texto */
-    border: 2px solid #0F2C54; /* Borde del botón */
-    border-radius: 30px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espacio interno */
-    cursor: pointer; /* Cursor tipo pointer */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
-}
-
-.filter-btn.active {
-    background-color: #0F2C54; /* Color de fondo activo */
-    color: white; /* Color del texto activo */
-    border: 2px solid #D4B655; /* Borde del botón */
+    background-color: transparent;
+    color: #0F2C54;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
     outline: none;
 }
 
-.filter-btn:hover {
-    background-color: #0F2C54; /* Color de fondo al pasar el cursor */
-    color: white; /* Color del texto al pasar el cursor */
+/* Elimina el borde azul predeterminado al hacer clic en los botones */
+.filter-btn {
+    outline: none;
 }
 
-/* Estilos para las secciones */
-#intro-galeria, #gallery-filters, #galeria {
-    margin-bottom: 5px; /* Margen inferior entre secciones */
+/* Elimina el efecto de selección azul en navegadores webkit (Chrome, Safari) */
+.filter-btn::-moz-focus-inner {
+    border: 0;
 }
+
+/* Personaliza o elimina el efecto de "focus" */
+.filter-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* Estilo para el botón activo o cuando se hace hover */
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #0F2C54;
+    color: #ffffff;
+}
+
+/* Ajustes para la disposición de los botones */
+#gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/* Espaciado uniforme entre botones */
+.filter-btn + .filter-btn {
+    margin-left: 0;
+    border-left: 1px solid #E0E0E0; /* Línea divisoria sutil entre botones */
+}
+
+/* Efecto de transición para una apariencia suave */
+.filter-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Quitar bordes al contenedor para un diseño limpio */
+#filter-card {
+    border: none;
+}
+
+
+/* Estilos generales para la galería */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    margin: 0 auto; /* Centra el contenedor en el contenedor padre */
+    padding: 0; /* Elimina el padding si es necesario */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Asegúrate de que los elementos de la cuadrícula se ajusten a 3 columnas */
+.grid-item {
+    width: calc(33.333% - 15px); /* Asegúrate de que el ancho se ajuste correctamente */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    margin-bottom: 15px; /* Espacio entre filas */
+}
+
+.grid-item img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
+}
+
+
+/* Efecto hover solo en el contenedor */
+.grid-item:hover {
+    transform: scale(1.05); /* Agranda el contenedor al 105% */
+}
+
+.grid-item img:hover {
+    transform: none; /* Mantiene la imagen en su tamaño al hacer hover */
+}
+
+/* Media Query para pantallas medianas */
+@media (max-width: 768px) {
+    .grid-item {
+        width: calc(50% - 15px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 480px) {
+    .grid-item {
+        width: calc(100% - 15px); /* Una columna en pantallas pequeñas */
+    }
+}
+
+
+/* Modal de Imagen */
+.modal-img-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s; /* Solo transición de opacidad */
+    z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+.modal-img-overlay.active {
+    visibility: visible; /* Muestra el modal cuando esté activo */
+    opacity: 1;
+}
+
+.modal-img-overlay img {
+    max-width: 90%;
+    max-height: 80%;
+    border: 5px solid #FFF;
+    object-fit: contain; /* Mantiene la proporción de la imagen y permite el desplazamiento */
+    overflow: auto; /* Permite el desplazamiento de la imagen si es más grande que el contenedor */
+}
+
+/* Estilo para el botón de cierre del modal */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 10000; /* Asegura que el botón esté sobre la imagen */
+}
+
 
 /* Estilos específicos para la sección de contacto2 y footer */
 #contacto2-footer {
@@ -265,20 +442,40 @@ footer.bg-dark {
     background-size: contain; /* Ajustar el tamaño para que la imagen esté contenida */
     background-repeat: no-repeat; /* Evitar la repetición de la imagen */
     background-position: center;
+    border-radius: 10px;
 }
 
-.doctor-title {
+.doctor-titleIndex {
     font-family: 'Elizabeth', sans-serif;
-    color: #D4B655; /* Color del título */
+    color: #0F2C54; /* Color del título */
     font-size: 40px;
     margin-bottom: 15px;
 }
 
 #conoce-doctor p {
     color: #0F2C54; /* Color para los párrafos */
-    font-family: 'Elizabeth', sans-serif; /* Aplicar Roboto */
+    font-family: 'Montserrat', sans-serif; /* Aplicar Roboto */
     margin-bottom: 15px;
 }
+
+
+.conoce-doctor-parrafo{
+    color: #0F2C54; /* Color para los párrafos */
+    font-family: 'Montserrat', sans-serif; /* Aplicar Roboto */
+    margin-bottom: 15px;
+}
+
+/* styles.css */
+
+/* Efecto de aumento en las imágenes dentro de la clase 'instituciones' */
+.instituciones img {
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.instituciones img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
+
 
 .btn-agenda {
     background-color: white; /* Color de fondo del botón */
@@ -374,4 +571,378 @@ footer.bg-dark {
 
 #procedimientos .card-text {
     color: #0F2C54; /* Color del texto */
+}
+
+#nosotros .doctor-photo {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+#nosotros .doctor-title {
+    font-family: 'Elizabeth', sans-serif;
+    font-size: 2.5rem;
+    color: #0F2C54;
+    font-weight: bold;
+}
+
+#nosotros .doctor-subtitle {
+    color: #0F2C54;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#procedures-menu .nav-pills .nav-link {
+    color: #000;
+}
+
+.video-banner-container {
+    width: 100%;
+    height: 70vh; /* Ajusta esta altura según tus necesidades */
+    overflow: hidden;
+    position: relative;
+}
+
+.responsive-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video se adapte al contenedor sin deformarse */
+}
+
+.doctor-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    width: 30%;
+    object-fit: cover; /* Mantener la relación de aspecto de la imagen */
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 80px; /* Ajusta la posición horizontal a la izquierda */
+    background-color: transparent; /* Sin fondo */
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000; /* Asegúrate de que el botón esté por encima de otros elementos */
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-button:hover {
+    background-color: transparent; /* Sin efecto hover */
+}
+
+/* Estilos para el procedimiento */
+
+
+/* Estilos para el contenedor de los procedimientos */
+#procedures-menu {
+    display: flex;
+    flex-direction: column;
+    width: 25%; /* Ajusta el ancho según sea necesario */
+    border-right: 2px solid #D4B655; /* Borde derecho para separar las columnas */
+    padding: 20px;
+}
+
+#procedure-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Estilos para los enlaces del menú */
+#procedures-menu .nav-pills .nav-link {
+    color: #0F2C54;
+    background-color: #f8f9fa;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+#procedures-menu .nav-pills .nav-link:hover,
+#procedures-menu .nav-pills .nav-link:focus,
+#procedures-menu .nav-pills .nav-link.active {
+    color: white;
+    background-color: #0F2C54;
+}
+
+/* Estilos para el dropdown */
+#procedures-menu .dropdown-menu {
+    background-color: #f8f9fa;
+}
+
+#procedures-menu .dropdown-item {
+    color: #0F2C54;
+}
+
+#procedures-menu .dropdown-item:hover,
+#procedures-menu .dropdown-item:focus {
+    background-color: #0F2C54;
+    color: white;
+}
+
+#procedure-content {
+    background-color: white;
+    padding: 20px;
+}
+
+#procedure-banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#procedure-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#procedure-info h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+#procedure-info p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Asegúrate de que las imágenes en el carrusel tengan un tamaño definido */
+.price-image {
+    width: 310px; /* Tamaño de ancho */
+    height: 399px; /* Tamaño de alto */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+/* Estilo para el botón de play centrado */
+.play-button {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    border: none;
+    font-size: 36px;
+    color: #0F2C54; /* Color del ícono del botón */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    border-radius: 50%; /* Botón circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; /* Asegura que el botón esté por encima de las imágenes */
+    transition: background-color 0.3s; /* Efecto de transición para el color de fondo */
+}
+
+/* Asegúrate de que el contenedor del botón esté correctamente posicionado */
+.position-relative {
+    position: relative;
+}
+
+.position-relative .play-button {
+    position: absolute;
+    top: 50%; /* Posiciona verticalmente al 50% del contenedor */
+    left: 50%; /* Posiciona horizontalmente al 50% del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón sobre la imagen */
+    z-index: 10; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+/* Opcional: Cambiar el fondo del botón al pasar el mouse sobre él */
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilos adicionales para la navegación del carrusel */
+.price-carousel::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: #0F2C54;
+    border-radius: 8px 8px 50% 50%;
+    z-index: -1;
+}
+
+.price-carousel .owl-nav {
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.price-carousel .owl-nav .owl-prev,
+.price-carousel .owl-nav .owl-next {
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0F2C54;
+    background: #FFFFFF;
+    font-size: 22px;
+    border-radius: 45px;
+    transition: .5s;
+}
+
+.price-carousel .owl-nav .owl-prev:hover,
+.price-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+/* Tamaño del modal mediano con altura reducida */
+.modal-dialog.modal-md {
+    max-width: 600px; /* Ajusta el ancho del modal a 600px (puedes cambiar este valor según sea necesario) */
+    margin: 1.75rem auto; /* Centrando el modal verticalmente */
+}
+
+.modal-content {
+    background-color: transparent; /* Fondo transparente para el modal */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    max-height: 80vh; /* Ajusta la altura máxima del modal (80% de la altura del viewport) */
+}
+
+.modal-body {
+    padding: 0; /* Elimina el padding del modal */
+    position: relative; /* Asegura que el botón de cerrar esté posicionado correctamente */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido es más alto que el modal */
+    max-height: 80vh; /* Asegura que el cuerpo del modal no sea más alto que el modal */
+}
+
+.modal-body video {
+    border-radius: 8px; /* Bordes redondeados para el video */
+    width: 100%; /* Asegura que el video ocupe todo el ancho del modal */
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 70vh; /* Ajusta la altura máxima del video (70% de la altura del viewport) */
+}
+
+/* Estilo del botón de cerrar */
+.btn-close {
+    font-size: 1.5rem; /* Tamaño de la X */
+    width: 40px; /* Tamaño del botón */
+    height: 40px;
+    background: transparent; /* Fondo transparente para el botón */
+    border: none; /* Sin borde */
+    color: #ffffff; /* Color blanco para la X */
+    opacity: 1; /* Asegura que la X sea completamente opaca */
+    z-index: 1050; /* Asegura que el botón esté sobre otros elementos */
+}
+
+/* Estilo del botón de cerrar cuando se pasa el mouse */
+.btn-close:hover {
+    color: #ffffff; /* Color blanco al pasar el mouse */
+}
+
+/* Posicionamiento del botón de cerrar */
+.position-absolute {
+    position: absolute;
+    top: 10px; /* Ajusta según sea necesario */
+    right: 10px; /* Ajusta según sea necesario */
+    z-index: 1050; /* Asegura que esté sobre otros elementos */
+}
+
+.modal .btn-close {
+    color: #ffffff; /* Asegura que el color blanco sea aplicado */
+}
+
+
+/* Estilos para la sección de procedimientos */
+.procedure-section-title {
+    color: #0F2C54;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.procedure-section-description {
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el banner */
+.procedure-banner img {
+    width: 825px;
+    height: 275px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el menú de procedimientos */
+.procedure-menu {
+    border-right: 2px solid #0F2C54;
+    padding-right: 20px; /* Ajustar padding derecho para mayor espacio interno */
+    padding-left: 20px; /* Añadir padding izquierdo para más espacio interno */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    width: 300px; /* Ajustar el ancho del menú */
+}
+
+.procedure-menu .nav-link {
+    color: #0F2C54;
+    font-weight: 600;
+}
+
+.procedure-menu .nav-link:hover {
+    color: #D4B655;
+}
+
+.procedure-menu .nav-color {
+    background-color: #F8F9FA;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.procedure-menu .dropdown-item {
+    color: #0F2C54;
+}
+
+.procedure-menu .dropdown-item:hover {
+    background-color: #D4B655;
+    color: #fff;
+}
+
+/* Estilos para los enlaces */
+.procedure-links {
+    text-align: left;
+}
+
+.procedure-link-item {
+    display: inline-block;
+    font-size: 18px;
+    color: #0F2C54;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0F2C54;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    padding-bottom: 10px;
+}
+
+.procedure-link-item:hover {
+    background-color: #0F2C54;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+    padding-bottom: 60px; /* Ajustar según la altura del footer */
 }

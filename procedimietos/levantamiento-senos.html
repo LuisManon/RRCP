@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimientos - Rafael Rivera</title>
+    <link href="../img/icon.ico" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-top">
+        <div class="container d-flex justify-content-between align-items-center anti-container">
+            <div class="contact-info">
+                <i class="fas fa-phone" style="transform: rotate(100deg);"></i> <span data-lang="phone">1-829-467-0777</span>
+                <span class="separator">|</span>
+                <i class="fas fa-map-marker-alt"></i> <span data-lang="address">CECILIP, Calle Wifredo García #5, Santo Domingo 10510</span>
+                <span class="separator">|</span>
+                <i class="fas fa-envelope"></i> <span data-lang="email">info@rafaelrivera.do</span>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/Logo.jpg" alt="Logo" style="height: 120px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../galeria.html">Antes & Después</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../procedimientos.html" style="color: #D4B655;">Procedimientos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-underline" href="../about.html"><img src="../img/us.png" alt="Inglés" style="height: 15px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-underline" href="../index.html"><img src="../img/es.png" alt="Español" style="height: 15px;"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content mt-4">
+        <div class="row">
+            <!-- Menu de procedimientos -->
+            <section id="procedures-menu" class="col-md-3">
+                <ul class="nav nav-pills flex-column">
+                    <!-- Cirugía de Seno -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#collapseBreastSurgery" role="button" aria-expanded="false" aria-controls="collapseBreastSurgery" data-lang="breastSurgery">Cirugía de Senos</a>
+                        <div class="nav-color collapse" id="collapseBreastSurgery" data-parent="#procedures-menu">
+                            <a class="dropdown-item" href="aumento-senos.html" data-procedure="aumento" data-lang="augmentation">Aumento</a>
+                            <a class="dropdown-item" href="reduccion-senos.html" data-procedure="reduccion" data-lang="reduction">Reducción</a>
+                            <a class="dropdown-item" href="levantamiento-senos.html" data-procedure="levantamiento" data-lang="lift">Levantamiento</a>
+                            <a class="dropdown-item" href="ginecomastia.html" data-procedure="ginecomastia" data-lang="gynecomastia">Ginecomastia</a>
+                        </div>
+                    </li>
+                    <!-- Cirugía Facial -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#collapseFacialSurgery" role="button" aria-expanded="false" aria-controls="collapseFacialSurgery" data-lang="facialSurgery">Cirugía Facial</a>
+                        <div class="nav-color collapse" id="collapseFacialSurgery" data-parent="#procedures-menu">
+                            <a class="dropdown-item" href="rinoplastia.html" data-procedure="rinoplastia" data-lang="rhinoplasty">Rinoplastia</a>
+                            <a class="dropdown-item" href="botox.html" data-procedure="botox" data-lang="botox">Botox</a>
+                        </div>
+                    </li>
+                    <!-- Contorno Corporal -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#collapseBodyContour" role="button" aria-expanded="false" aria-controls="collapseBodyContour" data-lang="bodyContour">Contorno Corporal</a>
+                        <div class="nav-color collapse" id="collapseBodyContour" data-parent="#procedures-menu">
+                            <a class="dropdown-item" href="liposuccion.html" data-procedure="liposuccion" data-lang="liposuction">Liposucción</a>
+                            <a class="dropdown-item" href="lipoescultura.html" data-procedure="lipoescultura" data-lang="liposculpture">Lipoescultura</a>
+                            <a class="dropdown-item" href="abdominoplastia.html" data-procedure="abdominoplastia" data-lang="abdominoplasty">Abdominoplastia</a>
+                            <a class="dropdown-item" href="levantamiento-gluteos.html" data-procedure="levantamiento-gluteos" data-lang="buttLift">Levantamiento de Glúteos</a>
+                            <a class="dropdown-item" href="mommymo.html" data-procedure="mommy-makeover" data-lang="mommyMakeover">Mommy Makeover</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>            
+            <!-- Contenido de la Página -->
+            <!-- Contenido de Procedimientos -->
+            <main class="col-md-9">
+                <!-- Banner -->
+                <div class="procedure-banner mb-4">
+                    <img src="../img/procedimientos/aumento-disminucion pecho.jpg" alt="Banner de Procedimientos" class="img-fluid">
+                </div>
+
+                <!-- Título y Descripción -->
+                <h2 class="procedure-section-title">Levantamiento de Senos</h2>
+                <p class="procedure-section-description">
+                    Bienvenido a nuestra sección de procedimientos quirúrgicos. Aquí encontrarás una amplia gama de tratamientos diseñados para realzar tu belleza y mejorar tu bienestar. Desde cirugía de seno hasta contorno corporal y cirugía facial, cada procedimiento está detalladamente descrito para que puedas tomar decisiones informadas sobre tu cuidado estético.                    
+                </p>
+                <p class="procedure-section-description">
+                    Utiliza el menú a la izquierda para explorar nuestras ofertas. Al seleccionar un procedimiento específico, accederás a información completa sobre cada uno, incluyendo beneficios, expectativas y recuperación. Nuestro objetivo es proporcionarte toda la información que necesitas para que te sientas seguro y cómodo al elegir el tratamiento adecuado para ti.
+                </p>
+                <p class="procedure-section-description">
+                    Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en cada paso del camino.
+                </p>
+
+                <!-- Enlaces -->
+                <div class="procedure-links mt-4">
+                    <a href="../nosotros.html" class="procedure-link-item">Conoce al Doctor Rivera</a>
+                    <a href="../galeria.html" class="procedure-link-item">Ver Resultados</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Contacto y Footer Unificado -->
+    <section id="contacto2-footer" class="py-4">
+        <div class="container">
+            <div class="row" id="PaddingRightFooter">
+                <div class="col-md-4">
+                    <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                    <p>Calle Wifredo García #5, Santo Domingo 10510</p>
+                </div>
+                <div class="col-md-4">
+                    <h3><i class="fas fa-calendar-alt"></i> Horario</h3>
+                    <p>Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+                    <p>Sábado: 9:00 AM - 1:00 PM</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+                <div class="col-md-4">
+                    <h3><i class="fas fa-phone" style="transform: rotate(100deg);"></i> Contacto</h3>
+                    <p>Teléfono: 1-829-467-0777</p>
+                    <p>Email: info@rafaelrivera.do</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; <span id="current-year"></span> Rafael Rivera Plastic Surgery. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Botón WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=18294670777&text=Hola%20quiero%20información%20sobre%20los%20procedimientos" 
+        class="whatsapp-button" 
+        target="_blank">
+            <img src="../img/icons8-whatsapp.svg" alt="WhatsApp">
+        </a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
