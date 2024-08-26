@@ -878,8 +878,8 @@ footer.bg-dark {
 .procedure-banner img {
     width: 825px;
     height: 275px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
 }
 
 /* Estilos para el menú de procedimientos */
