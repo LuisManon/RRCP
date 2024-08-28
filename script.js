@@ -52,30 +52,47 @@ $(document).ready(function() {
     });
 });
 
+//play pause carrusell
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtén todos los modales
+    var modals = document.querySelectorAll('.modal');
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Obtén todos los modales
-            var modals = document.querySelectorAll('.modal');
-    
-            modals.forEach(function (modal) {
-                // Reproduce el video cuando se muestra el modal
-                modal.addEventListener('shown.bs.modal', function () {
-                    var video = modal.querySelector('video');
-                    if (video) {
-                        video.play();
-                    }
-                });
-    
-                // Pausa el video cuando se oculta el modal
-                modal.addEventListener('hidden.bs.modal', function () {
-                    var video = modal.querySelector('video');
-                    if (video) {
-                        video.pause();
-                        video.currentTime = 0; // Reinicia el video
-                    }
-                });
-            });
+    modals.forEach(function (modal) {
+        // Obtén el video en el modal
+        var video = modal.querySelector('video');
+
+        // Pausa el video y reinícialo cuando se oculta el modal
+        modal.addEventListener('hidden.bs.modal', function () {
+            if (video) {
+                video.pause();
+                video.currentTime = 0; // Reinicia el video
+            }
         });
+
+        // Asegúrate de que el video esté en pausa al cargar el modal
+        modal.addEventListener('show.bs.modal', function () {
+            if (video) {
+                video.play();
+            }
+        });
+
+        // Controla la reproducción del video mediante el botón de play/pause
+        var playButton = modal.querySelector('.btn.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function () {
+                if (video) {
+                    if (video.paused) {
+                        video.play();
+                        playButton.style.display = 'none'; // Oculta el botón de play cuando el video se reproduce
+                    } else {
+                        video.pause();
+                        playButton.style.display = 'block'; // Muestra el botón de play cuando el video está pausado
+                    }
+                }
+            });
+        }
+    });
+});
 
         // Abrir el modal
 document.querySelectorAll('.grid-item img').forEach(image => {
