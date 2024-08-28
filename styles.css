@@ -937,3 +937,12 @@ footer.bg-dark {
 .main-content {
     padding-bottom: 60px; /* Ajustar según la altura del footer */
 }
+
+.phone-text {
+    -webkit-touch-callout: none; /* Desactiva el toque para llamar en dispositivos iOS */
+    -webkit-user-select: none; /* Desactiva la selección en dispositivos iOS */
+    -moz-user-select: none; /* Desactiva la selección en Firefox */
+    -ms-user-select: none; /* Desactiva la selección en Internet Explorer/Edge */
+    user-select: none; /* Desactiva la selección en la mayoría de los navegadores modernos */
+    cursor: default; /* Cambia el cursor para no parecer un enlace */
+}
