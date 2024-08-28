@@ -563,6 +563,11 @@ footer.bg-dark {
     font-size: 16px; /* Tamaño de fuente de la descripción */
 }
 
+.elegirnos-description {
+    color: #0F2C54; /* Color del texto de la card */
+    font-size: 16px; /* Tamaño de fuente de la descripción */
+}
+
 /* Estilos para la sección de Procedimientos */
 #procedimientos .card {
     border: none; /* Eliminar borde */
