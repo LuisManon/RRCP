@@ -173,6 +173,7 @@ body {
     .header-top {
         display: none;
     }
+
     #contacto2-footer .row {
         flex-direction: column;
         align-items: center;
@@ -594,10 +595,6 @@ footer.bg-dark {
     margin-bottom: 20px;
 }
 
-#procedures-menu .nav-pills .nav-link {
-    color: #000;
-}
-
 .video-banner-container {
     width: 100%;
     height: 70vh; /* Ajusta esta altura según tus necesidades */
@@ -648,16 +645,23 @@ footer.bg-dark {
     background-color: transparent; /* Sin efecto hover */
 }
 
-/* Estilos para el procedimiento */
-
-
-/* Estilos para el contenedor de los procedimientos */
+/* Estilos generales para el contenedor de los procedimientos */
 #procedures-menu {
     display: flex;
     flex-direction: column;
     width: 25%; /* Ajusta el ancho según sea necesario */
     border-right: 2px solid #D4B655; /* Borde derecho para separar las columnas */
-    padding: 20px;
+    padding: 10px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #procedures-menu {
+        width: 100%; /* El menú ocupa todo el ancho del dispositivo */
+        border-right: none; /* Elimina el borde derecho */
+        margin: 0 10px; /* Aplica un pequeño margen a los laterales */
+        padding: 10px; /* Ajusta el padding para dispositivos pequeños */
+    }
 }
 
 #procedure-content {
@@ -673,24 +677,15 @@ footer.bg-dark {
     margin-bottom: 10px;
 }
 
-#procedures-menu .nav-pills .nav-link:hover,
-#procedures-menu .nav-pills .nav-link:focus,
-#procedures-menu .nav-pills .nav-link.active {
-    color: white;
-    background-color: #0F2C54;
-}
-
-/* Estilos para el dropdown */
-#procedures-menu .dropdown-menu {
-    background-color: #f8f9fa;
-}
-
-#procedures-menu .dropdown-item {
+.dropdown-item{
     color: #0F2C54;
 }
 
 #procedures-menu .dropdown-item:hover,
-#procedures-menu .dropdown-item:focus {
+#procedures-menu .dropdown-item:focus
+#procedures-menu .nav-pills .nav-link:hover,
+#procedures-menu .nav-pills .nav-link:focus,
+#procedures-menu .nav-pills .nav-link.active{
     background-color: #0F2C54;
     color: white;
 }
@@ -867,12 +862,25 @@ footer.bg-dark {
     margin-bottom: 20px;
 }
 
+.procedure-section-subtitle {
+    color: #0F2C54;
+    text-align: left;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
 .procedure-section-description {
     text-align: left;
     font-size: 16px;
-    color: #333;
+    color: #0F2C54;
     margin-bottom: 30px;
 }
+
+.text-blue-bullets {
+    color: #0F2C54; /* Cambia el color del texto a azul */
+    list-style-type: disc; /* Cambia los bullets al estilo de disco (punto sólido) */
+}
+
 
 /* Estilos para el banner */
 .procedure-banner img {
@@ -880,42 +888,6 @@ footer.bg-dark {
     height: 275px;
     /* border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-}
-
-/* Estilos para el menú de procedimientos */
-.procedure-menu {
-    border-right: 2px solid #0F2C54;
-    padding-right: 20px; /* Ajustar padding derecho para mayor espacio interno */
-    padding-left: 20px; /* Añadir padding izquierdo para más espacio interno */
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    width: 300px; /* Ajustar el ancho del menú */
-}
-
-.procedure-menu .nav-link {
-    color: #0F2C54;
-    font-weight: 600;
-}
-
-.procedure-menu .nav-link:hover {
-    color: #D4B655;
-}
-
-.procedure-menu .nav-color {
-    background-color: #F8F9FA;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.procedure-menu .dropdown-item {
-    color: #0F2C54;
-}
-
-.procedure-menu .dropdown-item:hover {
-    background-color: #D4B655;
-    color: #fff;
 }
 
 /* Estilos para los enlaces */
