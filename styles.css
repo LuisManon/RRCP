@@ -334,7 +334,7 @@ footer.bg-dark {
 /* Media Query para pantallas medianas */
 @media (max-width: 768px) {
     .grid-item {
-        width: calc(50% - 15px); /* Dos columnas en pantallas medianas */
+        width: calc(100% - 15px); /* Dos columnas en pantallas medianas */
     }
 }
 
@@ -587,6 +587,7 @@ footer.bg-dark {
     font-size: 2.5rem;
     color: #0F2C54;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 #nosotros .doctor-subtitle {
@@ -661,6 +662,15 @@ footer.bg-dark {
         border-right: none; /* Elimina el borde derecho */
         margin: 0 10px; /* Aplica un pequeño margen a los laterales */
         padding: 10px; /* Ajusta el padding para dispositivos pequeños */
+    }
+    #nosotros .doctor-title {
+        margin-top: 20px;
+    }
+    .doctor-titleIndex {
+        margin-top: 20px;
+    }
+    .whatsapp-button {
+        right: 10px; /* Ajusta la posición horizontal a la izquierda */
     }
 }
 
