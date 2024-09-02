@@ -679,9 +679,11 @@ footer.bg-dark {
     }
     #nosotros .doctor-title {
         margin-top: 20px;
+        font-size: 12px;
     }
     .doctor-titleIndex {
         margin-top: 20px;
+        font-size: 12px;
     }
     .whatsapp-button {
         right: 10px; /* Ajusta la posición horizontal a la izquierda */
