@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimientos - Rafael Rivera</title>
+    <link href="../img/logo.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-top">
+        <div class="container d-flex justify-content-between align-items-center anti-container">
+            <div class="contact-info">
+                <i class="fas fa-phone" style="transform: rotate(100deg);"></i> +1 (809) 696-7005
+                <span class="separator">|</span>
+                <i class="fas fa-map-marker-alt"></i> CECILIP, Calle Wifredo García #5, Santo Domingo 10510
+                <span class="separator">|</span>
+                <i class="fas fa-envelope"></i> info@rafaelrivera.do
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/rafaelriverard/" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/Logo.jpg" alt="Logo" style="height: 120px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Before & After</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="procedures.html" style="color: #D4B655;">Procedures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-underline" href="procedures.html"><img src="../img/us.png" alt="Inglés" style="height: 15px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no-underline" href="../procedimientos.html"><img src="../img/es.png" alt="Español" style="height: 15px;"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content mt-4">
+        <div class="row">
+            <!-- Menu de procedimientos -->
+            <section id="procedures-menu" class="col-md-3 effect-left">
+                <ul class="nav nav-pills flex-column">
+                    <!-- Cirugía de Seno -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#collapseBreastSurgery" role="button" aria-expanded="false" aria-controls="collapseBreastSurgery" data-lang="breastSurgery">Breast Surgery</a>
+                        <div class="nav-color collapse" id="collapseBreastSurgery" data-parent="#procedures-menu">
+                            <a class="dropdown-item" href="procedures/breast-augmentation.html" data-procedure="aumento" data-lang="augmentation">Breast Augmentation</a>
+                            <a class="dropdown-item" href="procedures/breast-reduction.html" data-procedure="reduccion" data-lang="reduction">Breast Reduction</a>
+                            <a class="dropdown-item" href="procedures/breast-lift.html" data-procedure="levantamiento" data-lang="lift">Breast Lift</a>
+                            <a class="dropdown-item" href="procedures/gynecomastia.html" data-procedure="ginecomastia" data-lang="gynecomastia">Gynecomastia</a>
+                        </div>
+                    </li>
+                    <!-- Cirugía Facial -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#collapseFacialSurgery" role="button" aria-expanded="false" aria-controls="collapseFacialSurgery" data-lang="facialSurgery">Facial Surgery</a>
+                        <div class="nav-color collapse" id="collapseFacialSurgery" data-parent="#procedures-menu">
+                            <a class="dropdown-item" href="procedures/rhinoplasty.html" data-procedure="rinoplastia" data-lang="rhinoplasty">Rhinoplasty</a>
+                            <a class="dropdown-item" href="procedures/botox.html" data-procedure="botox" data-lang="botox">Botox</a>
+                            <a class="dropdown-item" href="procedures/faceLift.html" data-procedure="botox" data-lang="botox">Facelift</a>
+                            <a class="dropdown-item" href="procedures/hyaluronic-acid.html" data-procedure="botox" data-lang="botox">Hyaluronic Acid</a>
+                        </div>
+                    </li>
+                    <!-- Contorno Corporal -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#collapseBodyContour" role="button" aria-expanded="false" aria-controls="collapseBodyContour" data-lang="bodyContour">Body Contour</a>
+                        <div class="nav-color collapse" id="collapseBodyContour" data-parent="#procedures-menu">
+                            <a class="dropdown-item" href="procedures/liposuction.html" data-procedure="liposuccion" data-lang="liposuction">Liposuction</a>
+                            <a class="dropdown-item" href="procedures/liposculpture.html" data-procedure="lipoescultura" data-lang="liposculpture">Liposculpture</a>
+                            <a class="dropdown-item" href="procedures/abdominoplasty.html" data-procedure="abdominoplastia" data-lang="abdominoplasty">Abdominoplasty</a>
+                            <a class="dropdown-item" href="procedures/buttLift.html" data-procedure="levantamiento-gluteos" data-lang="buttLift">Butt Lift</a>
+                            <a class="dropdown-item" href="procedures/mommymo.html" data-procedure="mommy-makeover" data-lang="mommyMakeover">Mommy Makeover</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>        
+            <!-- Contenido de la Página -->
+            <!-- Contenido de Procedimientos -->
+            <main class="col-md-9">
+                <!-- Banner -->
+                <div class="procedure-banner mb-4 effect-top">
+                    <img src="../img/procedimientos/mommymo.jpg" alt="Banner de Procedimientos" class="img-fluid">
+                </div>
+
+                <h2 class="procedure-section-title effect-bottom">Surgical Procedures</h2>
+                <p class="procedure-section-description effect-bottom">
+                    Welcome to our surgical procedures section. Here you will find a wide range of treatments designed to enhance your beauty and improve your well-being. From breast surgery to body contouring and facial surgery, each procedure is detailed so you can make informed decisions about your aesthetic care.
+                </p>
+                <p class="procedure-section-description effect-bottom">
+                    Use the menu on the left to explore our offerings. By selecting a specific procedure, you will access comprehensive information about each one, including benefits, expectations, and recovery. Our goal is to provide you with all the information you need to feel confident and comfortable in choosing the right treatment for you.
+                </p>
+                <p class="procedure-section-description effect-bottom">
+                    If you have any questions or concerns, please do not hesitate to contact us. We are here to assist you every step of the way.
+                </p>
+
+                <!-- Enlaces -->
+                <div class="procedure-links mt-4 effect-bottom">
+                    <a href="about.html" class="procedure-link-item">About the doctor</a>
+                    <a href="gallery.html" class="procedure-link-item">See Results</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Contacto y Footer Unificado -->
+    <section id="contacto2-footer" class="py-4 effect-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+                    <p>Calle Wifredo García #5, Santo Domingo 10510</p>
+                </div>
+                <div class="col-md-4">
+                    <h3><i class="fas fa-calendar-alt"></i> Schedule</h3>
+                    <p>Monday to Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="col-md-4">
+                    <h3><i class="fas fa-phone" style="transform: rotate(100deg);"></i> Contact</h3>
+                    <p class="phone-text">Phone: 1-809-696-7005</p>
+                    <p>Email: info@rafaelrivera.do</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; <span id="current-year"></span> Rafael Rivera Plastic Surgery. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=18096967005&text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20%2F%20Hi%2C%20I%20want%20to%20know%20more%20about%20your%20services" 
+    class="whatsapp-button" 
+    target="_blank">
+        <img src="../img/icons8-whatsapp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../script.js"></script>
+    <script src="../procedures.js"></script>
+    <script src="../scrollReveal.js"></script>
+</body>
+</html>
