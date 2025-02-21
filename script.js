@@ -106,3 +106,8 @@ document.querySelectorAll('.grid-item img').forEach(image => {
 document.getElementById('modal-close').addEventListener('click', () => {
     document.getElementById('modal-img-overlay').classList.remove('active');
 });
+
+setTimeout(() => {
+    let video = document.getElementById("doctorVideo");
+    video.muted = false; // Quitar mute después de 3 segundos
+}, 3000);
