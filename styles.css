@@ -953,3 +953,149 @@ footer.bg-dark {
     user-select: none; /* Desactiva la selección en la mayoría de los navegadores modernos */
     cursor: default; /* Cambia el cursor para no parecer un enlace */
 }
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;  /* Tamaño del círculo */
+    height: 50px; /* Tamaño del círculo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    border-radius: 50%; /* Hace que sea un círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta la posición para que esté realmente centrado */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Ajusta la distancia del borde izquierdo */
+}
+
+.carousel-control-next {
+    right: 10px; /* Ajusta la distancia del borde derecho */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo al pasar el mouse */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px;
+}
+/* Estilo para redondear las esquinas de los iframes (videos) */
+iframe {
+    border-radius: 15px;  /* Radio de 15px para bordes redondeados */
+    overflow: hidden;  /* Asegura que no haya desbordamientos */
+}
+
+/* Sección centrada */
+#testimonios2 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Contenedor de los videos */
+#video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos de los videos estilo Shorts */
+.video-wrapper {
+    width: 320px;
+    height: 570px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste del iframe */
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* Botones de navegación */
+.btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
+    outline: none;
+}
+
+.btn-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+/* Posición de los botones */
+.left {
+    left: -10px;
+}
+
+.right {
+    right: -10px;
+}
+
+/* RESPONSIVE: Mostrar 1 video en pantallas pequeñas */
+@media (max-width: 768px) {
+    #video-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .video-wrapper {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .btn-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .left {
+        left: 10px;
+    }
+    
+    .right {
+        right: 10px;
+    }
+}
+
+
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}

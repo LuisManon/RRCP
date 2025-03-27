@@ -17,7 +17,7 @@
     <header class="header-top">
         <div class="container d-flex justify-content-between align-items-center anti-container">
             <div class="contact-info">
-                <i class="fas fa-phone" style="transform: rotate(100deg);"></i> +1 (809) 696-7005
+                <i class="fas fa-phone"></i> +1 (809) 696-7005
                 <span class="separator">|</span>
                 <i class="fas fa-map-marker-alt"></i> CECILIP, Calle Wifredo García #5, Santo Domingo 10510
                 <span class="separator">|</span>
@@ -217,103 +217,18 @@
         <hr class="my-4">
     </div>
 
-<!-- testimonios-->
-<div class="container-fluid py-5">
-    <div class="container">
-        <h2 class="section-title text-center">Testimonials</h2>
-        <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
-            <!-- Plan 1 -->
-            <div class="bg-light rounded text-center position-relative rounded-image">
-                <img class="img-fluid rounded-top price-image" src="../multimedia/testimonios/Jonairys.png" alt="Jonairys Plan">
-                <button class="btn play-button" data-bs-toggle="modal" data-bs-target="#videoModal1">
-                    <i class="fas fa-play"></i>
-                </button>
-            </div>
-            <!-- Plan 2 -->
-            <div class="bg-light rounded text-center position-relative">
-                <img class="img-fluid rounded-top price-image" src="../multimedia/testimonios/maciel.png" alt="Maciel Plan">
-                <button class="btn play-button" data-bs-toggle="modal" data-bs-target="#videoModal2">
-                    <i class="fas fa-play"></i>
-                </button>
-            </div>
-            <!-- Plan 3 -->
-            <div class="bg-light rounded text-center position-relative">
-                <img class="img-fluid rounded-top price-image" src="../multimedia/testimonios/wanda.png" alt="Wanda Plan">
-                <button class="btn play-button" data-bs-toggle="modal" data-bs-target="#videoModal3">
-                    <i class="fas fa-play"></i>
-                </button>
-            </div>
-            <!-- Plan 4 -->
-            <div class="bg-light rounded text-center position-relative">
-                <img class="img-fluid rounded-top price-image" src="../multimedia/testimonios/maciel.png" alt="Maciel Plan Again">
-                <button class="btn play-button" data-bs-toggle="modal" data-bs-target="#videoModal4">
-                    <i class="fas fa-play"></i>
-                </button>
-            </div>
+    <section id="testimonios2" class="videos-testimonios">
+        <h2 class="section-title text-center">Testimonios</h2>
+        <div class="container position-relative">
+            <button class="btn-nav left" id="previousBtn">
+                <i class="bi bi-chevron-left carousel-control-prev-icon"></i>
+            </button>
+            <div class="row justify-content-center" id="video-container"></div>
+            <button class="btn-nav right" id="nextBtn">
+                <i class="bi bi-chevron-right carousel-control-next-icon"></i>
+            </button>
         </div>
-    </div>
-</div>
-
-<!-- Video Modals -->
-<!-- Video Modal 1 -->
-<div class="modal fade" id="videoModal1" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md"> <!-- Aplicando el tamaño pequeño aquí -->
-        <div class="modal-content bg-dark">
-            <div class="modal-body position-relative">
-                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                <video controls>
-                    <source src="../multimedia/testimonios/Jonairys.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Video Modal 2 -->
-<div class="modal fade" id="videoModal2" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md"> <!-- Aplicando el tamaño pequeño aquí -->
-        <div class="modal-content bg-dark">
-            <div class="modal-body position-relative">
-                <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close">X</button>
-                <video controls>
-                    <source src="../multimedia/testimonios/maciel.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Video Modal 3 -->
-<div class="modal fade" id="videoModal3" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md"> <!-- Aplicando el tamaño pequeño aquí -->
-        <div class="modal-content bg-dark">
-            <div class="modal-body position-relative">
-                <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
-                <video controls>
-                    <source src="../multimedia/testimonios/wanda.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Video Modal 4 -->
-<div class="modal fade" id="videoModal4" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md"> <!-- Aplicando el tamaño pequeño aquí -->
-        <div class="modal-content bg-dark">
-            <div class="modal-body position-relative">
-                <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
-                <video controls>
-                    <source src="../multimedia/testimonios/maciel.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
 
 <div class="container">
     <hr class="my-4">
@@ -361,6 +276,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="../script.js"></script>
+    <script src="../script2.js"></script>
     <script src="../scrollReveal.js"></script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
