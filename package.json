@@ -1,0 +1,10 @@
+{
+  "name": "rrcp-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site formatting config",
+  "scripts": {
+    "format:css": "prettier --write \"**/*.css\""
+  }
+}
+

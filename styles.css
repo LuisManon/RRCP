@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: 'Elizabeth';
-    src: url('fonts/Elizabeth Script.otf') format('opentype'),
-         url('fonts/Elizabeth Script.ttf') format('truetype');
+    src:
+        url('fonts/Elizabeth Script.otf') format('opentype'),
+        url('fonts/Elizabeth Script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -28,7 +28,7 @@ body {
 }
 
 .header-top {
-    background-color: #0F2C54;
+    background-color: #0f2c54;
     padding: 10px 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -46,7 +46,7 @@ body {
 /* Estilos para el efecto de hover en el navbar */
 .navbar-light .navbar-nav .nav-link {
     position: relative;
-    color: #0F2C54;
+    color: #0f2c54;
     overflow: hidden;
 }
 
@@ -57,7 +57,7 @@ body {
     height: 3px; /* Grosor del subrayado */
     bottom: 0; /* Ajusta esta propiedad para acercar el subrayado */
     left: -100%;
-    background-color: #D4B655;
+    background-color: #d4b655;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #D4B655;
+    color: #d4b655;
 }
 
 /* Estilos para los enlaces sin subrayado */
@@ -80,7 +80,6 @@ body {
 .navbar-light .navbar-nav .nav-link.no-underline:hover {
     color: inherit;
 }
-
 
 .map-container {
     position: relative;
@@ -143,15 +142,15 @@ body {
 }
 
 #contacto h3 {
-    color: #0F2C54; /* Color para los títulos */
+    color: #0f2c54; /* Color para los títulos */
 }
 
 #contacto p {
-    color: #0F2C54; /* Color para los párrafos */
+    color: #0f2c54; /* Color para los párrafos */
 }
 
 #contacto .fas {
-    color: #0F2C54; /* Color para los iconos */
+    color: #0f2c54; /* Color para los iconos */
 }
 
 /* Estilos específicos para la sección de contacto2 */
@@ -159,7 +158,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 30px 0; /* Añadir padding para separación */
-    background-color: #0F2C54;
+    background-color: #0f2c54;
 }
 
 @media (max-width: 768px) {
@@ -190,7 +189,7 @@ footer.bg-dark {
 }
 
 .footer-top {
-    background-color: #0F2C54;
+    background-color: #0f2c54;
     padding: 10px 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -203,18 +202,17 @@ footer.bg-dark {
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); /* Importando Poppins Light */
 
-
 #intro-galeria {
     text-align: left; /* Alinear texto a la izquierda */
     padding: 20px; /* Añadir espacio interno */
 }
 
 #intro-galeria h2 {
-    color: #0F2C54; /* Color del título */
+    color: #0f2c54; /* Color del título */
 }
 
 #intro-galeria p {
-    color: #0F2C54; /* Color del texto */
+    color: #0f2c54; /* Color del texto */
     font-family: 'Montserrat', sans-serif; /* Aplicar Poppins Light */
     font-weight: 300; /* Estilo Light */
     width: 100%; /* Hacer que el párrafo ocupe todo el ancho disponible */
@@ -222,7 +220,7 @@ footer.bg-dark {
 }
 
 /* Estilos para las imágenes de la galería */
-        /* Botones de Filtro */
+/* Botones de Filtro */
 
 /* Estilo general del contenedor tipo "card" */
 /* Estilo general del contenedor tipo "card" */
@@ -238,7 +236,7 @@ footer.bg-dark {
 /* Estilos generales para los botones */
 .filter-btn {
     background-color: transparent;
-    color: #0F2C54;
+    color: #0f2c54;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
@@ -265,11 +263,10 @@ footer.bg-dark {
     box-shadow: none;
 }
 
-
 /* Estilo para el botón activo o cuando se hace hover */
 .filter-btn.active,
 .filter-btn:hover {
-    background-color: #0F2C54;
+    background-color: #0f2c54;
     color: #ffffff;
 }
 
@@ -283,19 +280,20 @@ footer.bg-dark {
 /* Espaciado uniforme entre botones */
 .filter-btn + .filter-btn {
     margin-left: 0;
-    border-left: 1px solid #E0E0E0; /* Línea divisoria sutil entre botones */
+    border-left: 1px solid #e0e0e0; /* Línea divisoria sutil entre botones */
 }
 
 /* Efecto de transición para una apariencia suave */
 .filter-btn {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 /* Quitar bordes al contenedor para un diseño limpio */
 #filter-card {
     border: none;
 }
-
 
 /* Estilos generales para la galería */
 .grid {
@@ -321,7 +319,6 @@ footer.bg-dark {
     border-radius: 10px; /* Redondea las esquinas de la imagen */
 }
 
-
 /* Efecto hover solo en el contenedor */
 .grid-item:hover {
     transform: scale(1.05); /* Agranda el contenedor al 105% */
@@ -339,11 +336,11 @@ footer.bg-dark {
     .filter-btn {
         padding: 10px 10px;
         margin: 0 0px;
-        border-left: 0px solid #FFF; 
+        border-left: 0px solid #fff;
     }
     .filter-btn + .filter-btn {
         margin-left: 0;
-        border-left: 0px solid #FFF; /* Línea divisoria sutil entre botones */
+        border-left: 0px solid #fff; /* Línea divisoria sutil entre botones */
     }
 }
 
@@ -353,7 +350,6 @@ footer.bg-dark {
         width: calc(100% - 15px); /* Una columna en pantallas pequeñas */
     }
 }
-
 
 /* Modal de Imagen */
 .modal-img-overlay {
@@ -368,7 +364,9 @@ footer.bg-dark {
     align-items: center;
     visibility: hidden; /* Oculto por defecto */
     opacity: 0;
-    transition: opacity 0.3s ease-in-out, visibility 0s; /* Solo transición de opacidad */
+    transition:
+        opacity 0.3s ease-in-out,
+        visibility 0s; /* Solo transición de opacidad */
     z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
 }
 
@@ -380,7 +378,7 @@ footer.bg-dark {
 .modal-img-overlay img {
     max-width: 90%;
     max-height: 80%;
-    border: 5px solid #FFF;
+    border: 5px solid #fff;
     object-fit: contain; /* Mantiene la proporción de la imagen y permite el desplazamiento */
     overflow: auto; /* Permite el desplazamiento de la imagen si es más grande que el contenedor */
 }
@@ -391,18 +389,17 @@ footer.bg-dark {
     top: 20px;
     right: 20px;
     font-size: 2rem;
-    color: #FFF;
+    color: #fff;
     cursor: pointer;
     z-index: 10000; /* Asegura que el botón esté sobre la imagen */
 }
-
 
 /* Estilos específicos para la sección de contacto2 y footer */
 #contacto2-footer {
     display: flex;
     justify-content: center;
     padding: 30px 0; /* Añadir padding para separación */
-    background-color: #0F2C54;
+    background-color: #0f2c54;
     color: white; /* Color del texto */
 }
 
@@ -421,15 +418,15 @@ footer.bg-dark {
 }
 
 #contacto2-footer h3 {
-    color: #FFF; /* Color para los títulos */
+    color: #fff; /* Color para los títulos */
 }
 
 #contacto2-footer p {
-    color: #FFF; /* Color para los párrafos */
+    color: #fff; /* Color para los párrafos */
 }
 
 #contacto2-footer .fas {
-    color: #FFF; /* Color para los iconos */
+    color: #fff; /* Color para los iconos */
 }
 
 #contacto2-footer hr {
@@ -457,20 +454,19 @@ footer.bg-dark {
 
 .doctor-titleIndex {
     font-family: 'Elizabeth', sans-serif;
-    color: #0F2C54; /* Color del título */
+    color: #0f2c54; /* Color del título */
     font-size: 40px;
     margin-bottom: 15px;
 }
 
 #conoce-doctor p {
-    color: #0F2C54; /* Color para los párrafos */
+    color: #0f2c54; /* Color para los párrafos */
     font-family: 'Montserrat', sans-serif; /* Aplicar Roboto */
     margin-bottom: 15px;
 }
 
-
-.conoce-doctor-parrafo{
-    color: #0F2C54; /* Color para los párrafos */
+.conoce-doctor-parrafo {
+    color: #0f2c54; /* Color para los párrafos */
     font-family: 'Montserrat', sans-serif; /* Aplicar Roboto */
     margin-bottom: 15px;
 }
@@ -486,36 +482,37 @@ footer.bg-dark {
     transform: scale(1.1); /* Aumenta el tamaño en un 10% */
 }
 
-
 .btn-agenda {
     background-color: white; /* Color de fondo del botón */
-    color: #0F2C54; /* Color del texto */
-    border: 2px solid #0F2C54; /* Borde del botón */
+    color: #0f2c54; /* Color del texto */
+    border: 2px solid #0f2c54; /* Borde del botón */
     border-radius: 30px; /* Bordes redondeados */
     padding: 10px 20px; /* Espacio interno */
     cursor: pointer; /* Cursor tipo pointer */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease; /* Transición suave */
 }
 
 .btn-agenda:hover {
-    background-color: #0F2C54; /* Color de fondo al pasar el cursor */
+    background-color: #0f2c54; /* Color de fondo al pasar el cursor */
     color: white; /* Color del texto al pasar el cursor */
 }
 
 #conoce-doctor .social-icons a {
     font-size: 24px; /* Tamaño de fuente más grande para los iconos */
-    color: #0F2C54; /* Color de los iconos */
+    color: #0f2c54; /* Color de los iconos */
     transition: color 0.3s ease; /* Transición suave */
 }
 
 #conoce-doctor .social-icons a:hover {
-    color: #D4B655; /* Color al pasar el cursor sobre los iconos */
+    color: #d4b655; /* Color al pasar el cursor sobre los iconos */
 }
 
 /* Estilo para la quote */
 #conoce-doctor .quote {
     font-style: italic;
-    color: #0F2C54;
+    color: #0f2c54;
     margin-top: 15px;
 }
 
@@ -526,7 +523,7 @@ footer.bg-dark {
 }
 
 .section-title {
-    color: #0F2C54; /* Color del título */
+    color: #0f2c54; /* Color del título */
     margin-bottom: 30px;
 }
 
@@ -538,7 +535,9 @@ footer.bg-dark {
     margin: 20px; /* Margen entre cards */
     text-align: center; /* Alinear texto al centro */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transición suave */
+    transition:
+        transform 0.3s ease-out,
+        box-shadow 0.3s ease-out; /* Transición suave */
 }
 
 .card:hover {
@@ -548,23 +547,23 @@ footer.bg-dark {
 
 .card-icon {
     font-size: 40px; /* Tamaño del icono */
-    color: #0F2C54; /* Color del icono */
+    color: #0f2c54; /* Color del icono */
     margin-bottom: 15px; /* Espacio inferior */
 }
 
 .card-title {
-    color: #0F2C54; /* Color del título de la card */
+    color: #0f2c54; /* Color del título de la card */
     font-size: 20px; /* Tamaño de fuente del título */
     margin-bottom: 15px; /* Espacio inferior */
 }
 
 .card-description {
-    color: #0F2C54; /* Color del texto de la card */
+    color: #0f2c54; /* Color del texto de la card */
     font-size: 16px; /* Tamaño de fuente de la descripción */
 }
 
 .elegirnos-description {
-    color: #0F2C54; /* Color del texto de la card */
+    color: #0f2c54; /* Color del texto de la card */
     font-size: 16px; /* Tamaño de fuente de la descripción */
 }
 
@@ -572,7 +571,9 @@ footer.bg-dark {
 #procedimientos .card {
     border: none; /* Eliminar borde */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* Transición suave */
 }
 
 #procedimientos .card:hover {
@@ -581,11 +582,11 @@ footer.bg-dark {
 }
 
 #procedimientos .card-title {
-    color: #0F2C54; /* Color del título */
+    color: #0f2c54; /* Color del título */
 }
 
 #procedimientos .card-text {
-    color: #0F2C54; /* Color del texto */
+    color: #0f2c54; /* Color del texto */
 }
 
 #nosotros .doctor-photo {
@@ -599,13 +600,13 @@ footer.bg-dark {
 #nosotros .doctor-title {
     font-family: 'Elizabeth', sans-serif;
     font-size: 2.5rem;
-    color: #0F2C54;
+    color: #0f2c54;
     font-weight: bold;
     margin-top: 10px;
 }
 
 #nosotros .doctor-subtitle {
-    color: #0F2C54;
+    color: #0f2c54;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -665,7 +666,7 @@ footer.bg-dark {
     display: flex;
     flex-direction: column;
     width: 25%; /* Ajusta el ancho según sea necesario */
-    border-right: 2px solid #D4B655; /* Borde derecho para separar las columnas */
+    border-right: 2px solid #d4b655; /* Borde derecho para separar las columnas */
     padding: 10px;
 }
 
@@ -697,22 +698,21 @@ footer.bg-dark {
 
 /* Estilos para los enlaces del menú */
 #procedures-menu .nav-pills .nav-link {
-    color: #0F2C54;
+    color: #0f2c54;
     background-color: #f8f9fa;
     border-radius: 0;
     margin-bottom: 10px;
 }
 
-.dropdown-item{
-    color: #0F2C54;
+.dropdown-item {
+    color: #0f2c54;
 }
 
 #procedures-menu .dropdown-item:hover,
-#procedures-menu .dropdown-item:focus
-#procedures-menu .nav-pills .nav-link:hover,
+#procedures-menu .dropdown-item:focus #procedures-menu .nav-pills .nav-link:hover,
 #procedures-menu .nav-pills .nav-link:focus,
-#procedures-menu .nav-pills .nav-link.active{
-    background-color: #0F2C54;
+#procedures-menu .nav-pills .nav-link.active {
+    background-color: #0f2c54;
     color: white;
 }
 
@@ -752,7 +752,7 @@ footer.bg-dark {
     background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
     border: none;
     font-size: 36px;
-    color: #0F2C54; /* Color del ícono del botón */
+    color: #0f2c54; /* Color del ícono del botón */
     width: 60px; /* Tamaño del botón */
     height: 60px;
     border-radius: 50%; /* Botón circular */
@@ -785,12 +785,12 @@ footer.bg-dark {
 /* Estilos adicionales para la navegación del carrusel */
 .price-carousel::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 50%;
     bottom: 0;
     left: 0;
-    background: #0F2C54;
+    background: #0f2c54;
     border-radius: 8px 8px 50% 50%;
     z-index: -1;
 }
@@ -812,11 +812,11 @@ footer.bg-dark {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0F2C54;
-    background: #FFFFFF;
+    color: #0f2c54;
+    background: #ffffff;
     font-size: 22px;
     border-radius: 45px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .price-carousel .owl-nav .owl-prev:hover,
@@ -880,16 +880,15 @@ footer.bg-dark {
     color: #ffffff; /* Asegura que el color blanco sea aplicado */
 }
 
-
 /* Estilos para la sección de procedimientos */
 .procedure-section-title {
-    color: #0F2C54;
+    color: #0f2c54;
     text-align: left;
     margin-bottom: 20px;
 }
 
 .procedure-section-subtitle {
-    color: #0F2C54;
+    color: #0f2c54;
     text-align: left;
     font-size: 26px;
     margin-bottom: 20px;
@@ -898,15 +897,14 @@ footer.bg-dark {
 .procedure-section-description {
     text-align: left;
     font-size: 16px;
-    color: #0F2C54;
+    color: #0f2c54;
     margin-bottom: 30px;
 }
 
 .text-blue-bullets {
-    color: #0F2C54; /* Cambia el color del texto a azul */
+    color: #0f2c54; /* Cambia el color del texto a azul */
     list-style-type: disc; /* Cambia los bullets al estilo de disco (punto sólido) */
 }
-
 
 /* Estilos para el banner */
 .procedure-banner img {
@@ -924,10 +922,10 @@ footer.bg-dark {
 .procedure-link-item {
     display: inline-block;
     font-size: 18px;
-    color: #0F2C54;
+    color: #0f2c54;
     text-decoration: none;
     padding: 10px 20px;
-    border: 2px solid #0F2C54;
+    border: 2px solid #0f2c54;
     border-radius: 5px;
     margin: 5px;
     transition: all 0.3s ease;
@@ -935,7 +933,7 @@ footer.bg-dark {
 }
 
 .procedure-link-item:hover {
-    background-color: #0F2C54;
+    background-color: #0f2c54;
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -954,8 +952,9 @@ footer.bg-dark {
     cursor: default; /* Cambia el cursor para no parecer un enlace */
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 50px;  /* Tamaño del círculo */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px; /* Tamaño del círculo */
     height: 50px; /* Tamaño del círculo */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
     border-radius: 50%; /* Hace que sea un círculo */
@@ -976,18 +975,20 @@ footer.bg-dark {
     right: 10px; /* Ajusta la distancia del borde derecho */
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover {
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo al pasar el mouse */
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     width: 20px; /* Ajusta el tamaño del ícono */
     height: 20px;
 }
 /* Estilo para redondear las esquinas de los iframes (videos) */
 iframe {
-    border-radius: 15px;  /* Radio de 15px para bordes redondeados */
-    overflow: hidden;  /* Asegura que no haya desbordamientos */
+    border-radius: 15px; /* Radio de 15px para bordes redondeados */
+    overflow: hidden; /* Asegura que no haya desbordamientos */
 }
 
 /* Sección centrada */
@@ -1068,28 +1069,26 @@ iframe {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .video-wrapper {
         width: 100%;
         max-width: 320px;
     }
-    
+
     .btn-nav {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
-    
+
     .left {
         left: 10px;
     }
-    
+
     .right {
         right: 10px;
     }
 }
-
-
 
 button {
     outline: none;
