@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or temp paths (none currently)
+# Disallow: /admin/
+
+Sitemap: https://rafaelriveracirugiaplastica.do/sitemap.xml
+
