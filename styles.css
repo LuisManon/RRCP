@@ -136,9 +136,7 @@ body {
 }
 
 #contacto .col-md-4 {
-    flex: 1;
     margin-bottom: 30px;
-    max-width: 300px; /* Ancho máximo para cada columna */
 }
 
 #contacto h3 {
@@ -151,6 +149,17 @@ body {
 
 #contacto .fas {
     color: #0f2c54; /* Color para los iconos */
+}
+
+/* Social icons color on white background in contact section */
+#contacto .social-icons a {
+    color: #0f2c54;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#contacto .social-icons a:hover {
+    color: #D4B655;
 }
 
 /* Estilos específicos para la sección de contacto2 */
