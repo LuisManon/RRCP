@@ -1,10 +1,18 @@
 {
-  "name": "rrcp-site",
-  "version": "1.0.0",
+  "name": "rafael-rivera-cirugia-plastica",
+  "version": "2.0.0",
   "private": true,
-  "description": "Static site formatting config",
+  "type": "module",
   "scripts": {
-    "format:css": "prettier --write \"**/*.css\""
-  }
+    "dev": "vite",
+    "build": "vite build && cp -R img multimedia fonts js lib procedimientos en dist/ && cp contacto.html galeria.html procedimientos.html styles.css script.js script2.js scrollReveal.js testimonios.js robots.txt sitemap.xml dist/",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
 }
-

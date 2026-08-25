@@ -1,0 +1,45 @@
+/* Keep animated elements inside the document viewport without disabling
+   the deliberate swipe interaction used by the procedures section. */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+html,
+body {
+  overscroll-behavior-x: none;
+}
+
+body {
+  position: relative;
+}
+
+main,
+main > section,
+.procedure-stage {
+  width: 100%;
+  max-width: 100%;
+}
+
+main {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body,
+  #root,
+  main {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .procedures .procedure-stage {
+    width: auto;
+    max-width: calc(100vw - 48px);
+  }
+}

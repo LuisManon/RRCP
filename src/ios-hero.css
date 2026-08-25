@@ -1,0 +1,25 @@
+.hero {
+  background: #030f20;
+}
+
+.hero video {
+  top: calc(-1 * env(safe-area-inset-top, 0px));
+  bottom: auto;
+  height: calc(100% + env(safe-area-inset-top, 0px));
+}
+
+@supports (height: 100dvh) {
+  .hero {
+    height: 100dvh;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero video {
+    object-position: 61% center;
+  }
+}

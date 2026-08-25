@@ -1,0 +1,197 @@
+.patient-love {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 15% 30%, #244d70 0, transparent 30%), #071a36;
+}
+
+.patient-love h2 {
+  max-width: 850px;
+  font-size: clamp(56px, 8vw, 110px);
+}
+
+.chat-stream {
+  max-width: 1050px;
+  margin: 80px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.chat-row {
+  display: flex;
+  width: 100%;
+}
+
+.chat-right {
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  position: relative;
+  width: min(650px, 86%);
+  padding: 22px 25px 24px;
+  color: #0a1d38;
+  background: #f8fbfc;
+  border-radius: 4px 24px 24px 24px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, .2);
+}
+
+.chat-right .chat-bubble {
+  color: #f8fbfc;
+  background: #244d70;
+  border-radius: 24px 4px 24px 24px;
+}
+
+.chat-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #607687;
+  font: 600 10px 'Manrope';
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.chat-meta > span:not(.chat-avatar),
+.chat-meta time {
+  color: #607687;
+  -webkit-text-fill-color: #607687;
+  -webkit-text-stroke-width: 0;
+  font-weight: 700;
+  text-shadow: none;
+  filter: none;
+}
+
+.chat-right .chat-meta > span:not(.chat-avatar),
+.chat-right .chat-meta time {
+  color: #abc1ce;
+  -webkit-text-fill-color: #abc1ce;
+}
+
+.chat-right .chat-meta {
+  color: #abc1ce;
+}
+
+.chat-meta time {
+  margin-left: auto;
+  font-weight: 400;
+}
+
+.chat-avatar {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: #0f2c54;
+  border-radius: 50%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-shadow: none;
+  -webkit-text-stroke: 0 transparent;
+}
+
+.chat-right .chat-avatar {
+  color: #0f2c54;
+  -webkit-text-fill-color: #0f2c54;
+  background: #fff;
+}
+
+.chat-bubble > p {
+  margin: 18px 0 0;
+  font: 500 clamp(18px, 2vw, 27px)/1.35 'Manrope';
+  letter-spacing: -.02em;
+}
+
+.love-note {
+  margin-top: 45px;
+  text-align: center;
+  color: #8fa7b5;
+  font-size: 11px;
+}
+
+.conversation-cta {
+  min-width: min(390px, 100%);
+  padding: 20px 24px 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: #fff;
+  background: #071a36;
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(7, 26, 54, .18);
+  transition: transform .35s, background .35s;
+}
+
+.conversation-cta:hover {
+  transform: translateY(-5px);
+  background: #0f2c54;
+}
+
+.conversation-cta > span:first-child {
+  display: flex;
+  flex-direction: column;
+  font: 600 15px 'Manrope';
+}
+
+.conversation-cta small {
+  margin-bottom: 4px;
+  color: #a9c2cf;
+  font: 500 9px 'Manrope';
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.conversation-cta > span:last-child {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.whatsapp-chat-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.whatsapp-chat-icon i {
+  width: 22px;
+  height: 22px;
+  display: block;
+  background: currentColor;
+  -webkit-mask: url('/img/icons/chat-message.svg') center / contain no-repeat;
+  mask: url('/img/icons/chat-message.svg') center / contain no-repeat;
+}
+
+@media (max-width: 800px) {
+  .chat-stream {
+    margin-top: 55px;
+    gap: 18px;
+  }
+
+  .chat-bubble {
+    width: 92%;
+    padding: 18px 18px 20px;
+  }
+
+  .chat-bubble > p {
+    font-size: 17px;
+  }
+
+  .conversation-cta {
+    min-width: 100%;
+  }
+}

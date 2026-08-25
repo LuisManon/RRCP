@@ -1,0 +1,44 @@
+.procedure-icon-card {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 36%, rgba(169, 194, 207, .16), transparent 36%),
+    #0f2c54;
+}
+
+.procedure-card.procedure-icon-card > img {
+  position: absolute;
+  top: 40px;
+  left: 8%;
+  width: 84%;
+  height: 67%;
+  object-fit: contain;
+  opacity: .96;
+  transform: scale(.92);
+  transition: transform .7s cubic-bezier(.2, .75, .2, 1), opacity .4s;
+}
+
+.procedure-card.procedure-icon-card:hover > img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.procedure-icon-card .card-gradient {
+  z-index: 1;
+  background: linear-gradient(0deg, #081c39 8%, rgba(8, 28, 57, .82) 27%, transparent 58%);
+}
+
+.procedure-icon-card > span,
+.procedure-icon-card > div:last-child {
+  z-index: 2;
+}
+
+.procedure-icon-card > span {
+  color: #a9c2cf;
+}
+
+@media (max-width: 800px) {
+  .procedure-card.procedure-icon-card > img {
+    top: 20px;
+    height: 64%;
+  }
+}

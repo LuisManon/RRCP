@@ -1,0 +1,195 @@
+.procedure-stage-reveal {
+  transition-duration: 1.2s;
+}
+
+.procedure-stage {
+  position: relative;
+  min-height: 590px;
+  margin: 55px 8vw 0 0;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  align-items: center;
+  overflow: hidden;
+  color: #0a1d38;
+  background: transparent;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+}
+
+.procedure-stage:active {
+  cursor: grabbing;
+}
+
+.procedure-copy-viewport {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 310px;
+  overflow: hidden;
+}
+
+.procedure-drag-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  will-change: transform, opacity;
+}
+
+.procedure-stage.is-settling .procedure-drag-copy,
+.procedure-stage.is-settling .procedure-stage-symbol img {
+  transition: transform .5s cubic-bezier(.16, .82, .22, 1), opacity .42s ease;
+}
+
+.procedure-stage-copy {
+  position: relative;
+  z-index: 2;
+  animation: procedure-copy-in 1.35s cubic-bezier(.16, .72, .2, 1) both;
+}
+
+.procedure-stage-copy h3,
+.procedure-drag-copy h3 {
+  max-width: 650px;
+  margin: 0 0 28px;
+  font: 500 clamp(56px, 7vw, 108px)/.9 'Manrope';
+  letter-spacing: -.065em;
+}
+
+.procedure-stage-copy p,
+.procedure-drag-copy p {
+  max-width: 430px;
+  color: #4b6273;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.procedure-stage-symbol {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  animation: procedure-symbol-in 1.25s .72s cubic-bezier(.16, .72, .2, 1) both;
+}
+
+.procedure-stage-symbol::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(15, 44, 84, .1);
+  border-radius: 50%;
+  animation: procedure-orbit 1.6s 1.1s cubic-bezier(.16, .72, .2, 1) both;
+}
+
+.procedure-stage-symbol img {
+  position: relative;
+  grid-area: 1 / 1;
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(30%) saturate(1949%) hue-rotate(174deg) brightness(90%) contrast(97%);
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+.procedure-stage-symbol img.procedure-icon-compact {
+  width: min(82%, 430px);
+}
+
+.swipe-hand {
+  position: absolute;
+  z-index: 4;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #0f2c54;
+  animation: hand-arrives 1s .9s both, hand-points 1.4s 1.9s ease-in-out infinite;
+}
+
+.swipe-hand span {
+  font: 44px Georgia, serif;
+}
+
+.swipe-hand small {
+  font: 600 9px 'Manrope';
+  letter-spacing: .2em;
+}
+
+@keyframes procedure-copy-in {
+  from { opacity: 0; transform: translateX(-120px); filter: blur(7px); }
+  60% { opacity: 1; }
+  to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes procedure-symbol-in {
+  from { opacity: 0; transform: translateX(90px) scale(.72); filter: blur(8px); }
+  70% { opacity: 1; transform: translateX(0) scale(1.045); filter: blur(0); }
+  to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+}
+
+@keyframes procedure-orbit {
+  from { opacity: 0; transform: scale(.72); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hand-arrives {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes hand-points {
+  50% { transform: translateX(14px); }
+}
+
+@media (max-width: 800px) {
+  .procedure-stage {
+    min-height: 650px;
+    margin: 40px 24px 0 0;
+    padding-top: 65px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .procedure-stage-copy h3 {
+    font-size: clamp(50px, 15vw, 72px);
+  }
+
+  .procedure-copy-viewport {
+    min-height: 245px;
+  }
+
+  .procedure-drag-copy h3 {
+    font-size: clamp(50px, 15vw, 72px);
+  }
+
+  .procedure-stage-copy p,
+  .procedure-drag-copy p {
+    font-size: 16px;
+  }
+
+  .procedure-stage-symbol img {
+    width: min(90vw, 350px);
+  }
+
+  .procedure-stage-symbol img.procedure-icon-compact {
+    width: min(74vw, 292px);
+  }
+
+  .swipe-hand {
+    top: 4px;
+    right: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .procedure-stage-copy,
+  .procedure-stage-symbol,
+  .procedure-stage-symbol::before,
+  .swipe-hand {
+    animation: none;
+  }
+}

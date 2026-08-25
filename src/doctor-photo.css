@@ -1,0 +1,128 @@
+.doctor {
+  position: relative;
+  isolation: isolate;
+}
+
+.doctor::before,
+.doctor::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.doctor::before {
+  top: -2px;
+  height: clamp(105px, 10vw, 165px);
+  background: linear-gradient(
+    180deg,
+    #071a36 0%,
+    rgba(7, 26, 54, .9) 14%,
+    rgba(8, 29, 56, .48) 42%,
+    rgba(12, 37, 71, 0) 100%
+  );
+}
+
+.doctor::after {
+  bottom: 0;
+  height: clamp(190px, 20vw, 330px);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 37, 71, 0) 0%,
+    rgba(10, 32, 64, .42) 42%,
+    rgba(7, 26, 54, .88) 82%,
+    #071a36 100%
+  );
+}
+
+.stories {
+  background: linear-gradient(180deg, #0c2547 0, #0a2040 115px, #071a36 280px);
+}
+
+.doctor-photo-black {
+  background: #0c2547;
+}
+
+.doctor-photo-black img {
+  --doctor-scroll-zoom: 1.06;
+  object-fit: cover;
+  object-position: center 5%;
+  display: block;
+  transform: scale(var(--doctor-scroll-zoom));
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doctor-photo-black img {
+    transform: scale(1.06);
+  }
+}
+
+.doctor-photo-black::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.doctor-photo-black .photo-caption {
+  z-index: 1;
+}
+
+.doctor-career-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.doctor-career-link .scalpel-icon {
+  width: 23px;
+  height: 23px;
+  margin-left: 8px;
+  display: inline-block;
+  background: currentColor;
+  -webkit-mask: url('/img/icons/scalpel.svg') center / contain no-repeat;
+  mask: url('/img/icons/scalpel.svg') center / contain no-repeat;
+  transform: rotate(-4deg);
+  transition: transform .3s ease;
+}
+
+.doctor-career-link:hover .scalpel-icon {
+  transform: rotate(7deg) translate(2px, -2px);
+}
+
+@media (max-width: 800px) {
+  .doctor {
+    margin-top: -2px;
+  }
+
+  .doctor::before,
+  .doctor::after {
+    display: block;
+  }
+
+  .doctor::before {
+    height: 112px;
+  }
+
+  .doctor::after {
+    height: 250px;
+  }
+
+  .doctor-photo-black img {
+    object-position: center 23%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 7%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 7%, #000 92%, transparent 100%);
+  }
+
+  .doctor-photo-black::after {
+    display: block;
+    background: linear-gradient(0deg, rgba(12, 37, 71, .56), transparent 30%);
+  }
+
+}

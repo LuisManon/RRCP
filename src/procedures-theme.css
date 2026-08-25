@@ -1,0 +1,96 @@
+.nav,
+.nav.scrolled {
+  position: absolute;
+  height: 92px;
+  background: linear-gradient(180deg, rgba(3, 15, 32, .7), transparent);
+  backdrop-filter: none;
+  border-bottom: 0;
+}
+
+.procedures-intro {
+  color: #0a1d38;
+  background: #dbe7ec;
+}
+
+.procedures-intro .section-head > div:last-child p {
+  color: #4b6273;
+}
+
+.procedures-intro .section-head h2 em {
+  display: inline-block;
+  transform: translateY(clamp(12px, 1.2vw, 20px));
+}
+
+.procedures-intro .section-head h2 {
+  padding-bottom: clamp(12px, 1.2vw, 20px);
+}
+
+.procedures {
+  padding: 80px 0 110px clamp(24px, 8vw, 130px);
+  color: #f8fbfc;
+  background:
+    radial-gradient(circle at 82% 48%, rgba(43, 83, 116, .62), transparent 34%),
+    #071a36;
+}
+
+.procedures .procedure-stage {
+  min-height: 650px;
+  margin-top: 0;
+  color: #f8fbfc;
+}
+
+.procedures .procedure-stage-copy p,
+.procedures .procedure-drag-copy p {
+  color: #b9cad3;
+}
+
+.procedures .procedure-stage-symbol img {
+  filter: none;
+}
+
+.procedures .procedure-stage-symbol::before {
+  border-color: rgba(169, 194, 207, .18);
+}
+
+.procedures .swipe-hand {
+  color: #f8fbfc;
+}
+
+.procedures .carousel-progress,
+.procedures .carousel-progress .carousel-count {
+  color: #a9c2cf;
+}
+
+.procedures .carousel-dots button::after {
+  background: rgba(169, 194, 207, .35);
+}
+
+.procedures .carousel-dots button.active::after {
+  background: #f8fbfc;
+}
+
+.procedures .carousel-arrows button {
+  color: #f8fbfc;
+  border-color: rgba(248, 251, 252, .45);
+}
+
+.procedures .carousel-arrows button:hover {
+  color: #071a36;
+  background: #f8fbfc;
+}
+
+.procedures .carousel-arrows button:focus-visible,
+.procedures .carousel-dots button:focus-visible {
+  outline-color: #f8fbfc;
+}
+
+@media (max-width: 800px) {
+  .nav,
+  .nav.scrolled {
+    height: 74px;
+  }
+
+  .procedures {
+    padding: 65px 0 85px 24px;
+  }
+}
